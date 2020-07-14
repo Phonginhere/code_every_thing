@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        tr, td, th, table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+    function submitForm(e) {
+              e.preventDefault();
+              document.querySelector("#registration-form");
+              document.querySelector("#registration-block").style.opacity = "1"
+              // document.querySelector("#registration-block").removeAttribute("style")
+
+              // get data
+              var table = document.getElementById("myTable");
+              var row = table.insertRow(0);
+              var cell1 = row.insertCell(0);
+              var cell2 = row.insertCell(1);
+              var cell3 = row.insertCell(2);
+              var cell4 = row.insertCell(3);
+              var cell5 = row.insertCell(4);
+              cell1.innerHTML = document.querySelector("#name").value;
+              cell2.innerHTML = document.querySelector("#emai").value;
+
+          }
+        var input = document.getElementById("myInput");
+      // định nghĩa hàm xử lý myFunction
+      function myFunction() {
+        var filter, table, tr, td, i;
+        // lấy giá trị người dùng nhập
+        filter = input.value.toUpperCase();
+
+        // lấy phần bảng hiển thị kết quả
+        table = document.getElementById("myTable");
+        // lấy tất cả các thẻ tr
+        tr = table.getElementsByTagName("tr");
+
+        //Nếu filter không có giá trị ẩn các kết quả
+        if (!filter) {
+          table.style.display = "none";
+        }else{
+          // lặp qua tất cả các thẻ tr
+          for (i = 0; i < tr.length; i++) {
+            // lấy giá trị của thẻ td đầu tiên đại diện cho tên club
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              // kiểm tra giá trị filter có tồn tại trong thẻ tr không
+              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                //nếu có hiển thị chúng
+                table.style.display = "table";
+                tr[i].style.display = "";
+              } else {
+                // nếu không ẩn chúng
+                tr[i].style.display = "none";
+              }
+            }       
+          }
+        }
+      }
+      //gán sự kiện cho thẻ input
+      input.addEventListener("keyup", myFunction);
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <form onkeyup="checkButtons()" onsubmit="submitForm(event)">
+        <div id="registration-form">
+            <h5>thông tin</h5>
+            Họ tên: <input type="text" name="name" id="name" required pattern="[a-zA-Z]+[ ]+[a-zA-Z ]+">
+            Email: <input type="text" name="emai" id="emai" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <input type="submit" value="Cập Nhật"  id="btnSubmit"> 
+            <input type="reset"  id="btnReset" value="Hủy bỏ" style="margin-left: 30px; padding-right: 25px;">
+            </div>
+        </div>
+    </form>
+
+    <div id="registration-block" style="opacity: 0; transition: all 0.2s;">
+        <h2>Registration Completed</h2>
+        
+
+        <table id="myTable">
+            <tr>
+                <td>
+                    <label>Họ Tên</label>
+                    <label ></label>
+                </td>
+                <td>
+                    <label>Email</label>
+                    <label ></label>
+                </td>    
+            </tr>
+        </table>
+        <input type="text" id="myInput" placeholder="Tìm danh bạ" title="Type in a name of Club">
+    </div>
+</body>
+</html>

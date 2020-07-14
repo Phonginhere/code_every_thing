@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/test.css">
+    <script src="./js/test.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1><u>Product management</u></h1>
+    <table id="table1">
+        <tr>
+            <td>Product management:</td>
+            <td>
+                <input type="text" placeholder="Input student name" id="name">
+            </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" value="Old" name="Gender" checked>Old
+                <input type="radio" value="Good" name="Gender" checked>Good
+                <input type="radio" value="Other" name="Gender" checked>Other
+
+            </td>
+        </tr>
+        <tr>
+            <td>Select language</td>
+            <td>
+                <input type="checkbox" value="English" name="language" checked> English
+                <input type="checkbox" value="Chinese" name="language">Chinese
+                <input type="checkbox" value="Russian" name="language">Russian
+                <input type="checkbox" value="Vietnamese" name="language">Vietnamese
+                <input type="checkbox" value="French" name="language">French
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button id="add" onclick="addProduct()" >
+                    Add
+                </button>
+            </td>
+        </tr>
+    </table>
+    <h1>Product List</h1>
+    <table id="table2">
+        <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Condition</th>
+            <th>Language</th>
+            <th></th>
+        </tr>
+    </table>
+    </center>
+</body>
+</html>

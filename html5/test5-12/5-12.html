@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/5-12.js"></script>
+    <link rel="stylesheet" href="./css//5-12.css">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1 style="text-align: center;">Product management</h1>
+    <table id="table1">
+        <tr>
+            <td>
+                <p>name:</p>
+            </td>
+            <td>
+                <input type="text" placeholder="Input Product(iphone, ipad)" id="name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Select Language</p>
+            </td>
+            <td>
+                    <input type="checkbox" value="English" name="language" checked> English
+                    <input type="checkbox" value="Chinese" name="language">Chinese
+                    <input type="checkbox" value="Russian" name="language">Russian
+                    <input type="checkbox" value="Vietnamese" name="language">Vietnamese
+                    <input type="checkbox" value="French" name="language">French
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Gender</p>
+            </td>
+            <td>
+                <input type="radio" name="gender" value="Male">Old
+                <input type="radio" name="gender" value="Female">Good
+                <input type="radio" name="gender" value="Other">Other
+            </td>            
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <button id="add" onclick="addProduct()" >
+                    Add
+                </button>
+            </td>
+        </tr>
+    </table>
+</center>
+    <h1 style="text-align: center;">Product List</h1>
+    <table id="table2">
+        <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Condition</th>
+            <th>Language</th>
+            <th></th>
+        </tr>
+    </table>
+    <p style="text-align: right;">Total Product: <span id="countStudent">0</span></p>
+</body>
+</html>

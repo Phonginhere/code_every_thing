@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    
+    function checkButtons() {
+            var Name = document.querySelector("#name").value;
+            var District = document.querySelector("#dc").value;
+            var Company = document.querySelector("#work").value;
+            var Email = document.querySelector("#email").value;
+            var Phonenumber = document.querySelector("#phone").value;
+
+            if(Name || District || Company || Email || Phonenumber) {
+               // enable reset
+               document.querySelector('#btnReset').removeAttribute("disabled");
+            }
+            
+            if(!Name && !District && !Company && !Email && !Phonenumber){
+               // disable reset
+               document.querySelector('#btnReset').setAttribute("disabled", "disabled");
+            }
+
+            if(Name && District && Company && Email && Phonenumber) {
+                // enable calculate
+                document.querySelector('#btnSubmit').removeAttribute("disabled");
+            }
+            
+            if(!Name || !District || !Company || !Email || !Phonenumber) {
+                document.querySelector('#btnSubmit').setAttribute("disabled", "disabled");
+            }
+        }
+        function submitForm(e) {
+            var table = document.getElementById("myTable");
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = "NEW CELL1";
+  cell2.innerHTML = "NEW CELL2";
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <form onkeyup="checkButtons()" onsubmit="submitForm(event)">
+    <table>
+        <tr>
+            <td><label>Name</label></td>
+            <td>
+                <input type="text" id="name" placeholder="Nhap ten" required pattern="[a-zA-Z]+[ ]+[a-zA-Z ]+">
+            </td>
+        </tr>
+        <tr>
+            <td><label>District</label></td>
+            <td>
+                <input type="text" id="dc" placeholder="Nhap dia chi" required>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Company</label></td>
+            <td>
+                <input type="text" id="work" placeholder="Nhap cong ty/truong hoc" required>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Email</label></td>
+            <td>
+                <input type="text" id="email" placeholder="Nhap email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Phonenumber</label></td>
+            <td>
+                <input type="number" id="phone" placeholder="Nhap so dien thoai" pattern="[0-9]{10}" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Submit" disabled="disabled" id="btnSubmit">
+                <input type="reset" type="reset" disabled id="btnReset">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

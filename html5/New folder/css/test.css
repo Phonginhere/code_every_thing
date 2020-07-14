@@ -1,0 +1,8 @@
+#table2 th, #table2 td{
+    border: 1px solid black;
+    
+}
+#table2 {
+    border-collapse: collapse;
+    width: 100%;
+}

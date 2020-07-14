@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .body{
+            background-color: brown;
+        }
+    </style>
+    <script>
+        function myFunction() {
+        var money = document.getElementById("bill").value;
+        var people = document.getElementById("many").value;
+        var thirty = document.getElementById("thrty").value;
+        var twenty = document.getElementById("twnty").value;
+        var fifteen = document.getElementById("fifte").value;
+        var ten = document.getElementById("tn").value;
+        var five = document.getElementById("fe").value;
+        
+        if (document.getElementById("thrty").selected = "true"){
+            var sum = (money * 100 / 30) / people;
+            alert(sum);
+        }else if(document.getElementById("twnty").selected = "true"){
+            var sum = (money * 100 / 20) / people;
+            alert(sum);
+        }else if(document.getElementById("fifte").selected = "true"){
+            var sum = (money * 100 / 15) / people;
+            alert(sum);
+        }else if (document.getElementById("tn").selected = "true"){
+            var sum = (money * 100 / 10) / people;
+            alert(sum);
+        }else if (document.getElementById("fe").selected = "true"){
+            var sum = (money * 100 / 5) / people;
+            alert(sum);
+        }
+        
+ //       document.getElementById("demo").innerHTML = sum;
+        
+    }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+    <center>
+    <div style="background-color: brown; width: 30%; padding-bottom: 50px; padding-top: 0.1px;">
+        <div style="background-color: black; color: white; width: 90%; padding-bottom: 2px; border-top-right-radius: 20px; border-top-left-radius: 20px;">
+            <p>SHARE BILL</p>
+        </div>
+        <div style="background-color: white; width: 90%; padding-bottom: 20px; margin-top: -22px; font-size: 1.3em;">
+            <p>How much was your bill</p>
+            $<input type="number" id="bill" placeholder="Bill Amount" required>
+            <p>How was your service?</p>
+            <select name="" id="" required>
+                <option value="0" style="color: gray;">-- Choose an Option --</option>
+                <option value="1" id="thrty">30% - Outstanding</option>
+                <option value="2" id="twnty">20% - Good</option>
+                <option value="3" id="fifte">15% - It was OK</option>
+                <option value="4" id="tn">10% - Bad</option>
+                <option value="5" id="fe">5% - Terrible</option>
+            </select>
+            <p>How many people are sharing the bill?</p>
+            <div>
+            <input type="number" id="many" placeholder="Number of People" required>people
+        </div>
+                <button style="background-color: red; width: 40%; padding-bottom: 10px; border-radius: 5px; " onclick="myFunction()">Calculate!</button>
+            <p id="demo"></p>
+        </div>
+    </div>
+</center>
+
+</form>
+</body>
+</html>

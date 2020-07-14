@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/Untitled-1.css">
+    </link>
+</head>
+
+<body>
+    <center>
+    <h1>Student magement</h1> </center>
+    <form action="">
+        <table class="Studentmagement">
+            <tr>
+                <td>Student name</td>
+                <td><input type="text" required placeholder="Input school name"></td>
+            </tr>
+            <tr>
+                <td>Student DOB</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>Student Gender</td>
+                <td><input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Student Language</td>
+                <td><input type="checkbox" value="English" checked>English
+                    <input type="checkbox" value="Spanish" checked>Spanish
+                    <input type="checkbox" value="Vienamese" checked>Vietnamese
+                    <input type="checkbox" value="Fracise" checked>Francise
+                    <input type="checkbox" value="Arabic" checked>Arabic
+                </td>
+            </tr>
+            <tr>
+                <td>Student Class</td>
+                <td>
+                    <select>
+                        <option value="C1708G1">C1708G1</option>
+                        <option value="C1708G2">C1708G2</option>
+                        <option value="C1708G3">C1708G3</option>
+                        <option value="C1708G5">C1708G5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="add"></td>
+            </tr>
+        </table>
+    </form>
+    <center><h1>Student List</h1>
+    <div class="mytable2">
+        <table class="studentlist" id="studentlist">
+            <tr>
+                <th>Name</th>
+                <th>Class</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Language</th>
+                <th></th>
+            </tr>
+            <tr>
+                    <td>Nguyen Van A</td>
+                    <td>C18097G1</td>
+                    <td>20/10/1990</td>
+                    <td>Male</td>
+                    <td>English, Vietnamese</td>
+                    <td>
+                            <a href="#" onclick="removeStudent(this)">Delete</a>
+                    </td>
+            </tr>
+        </table>
+        <div style="text-align: right;">
+                <span style="font-weight: bold;">Total: </span><span>2 students</span></span>
+        </div>
+    </div>
+</center>
+</body>
+
+</html>

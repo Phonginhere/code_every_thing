@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+.header {
+    background-color: rgb(112, 189, 110);
+    height: 60px;
+}
+
+.header1{
+    border: 1px solid rgb(207, 90, 192);
+    background-color: pink;
+    padding-left: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin: 50px 50px;
+}
+.item {
+    position:relative;
+    top:12px;
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+    display: inline;
+}
+.myanchor {
+    margin-left: 5px;
+}
+
+#search {
+    height: 25px;
+    padding-left: 15px;
+    border-radius: 13px;
+}
+
+.customerInformation {
+    width: 80%;
+    background-color: pink;  
+    padding: 20px 20px;
+    padding-left: 200px;
+  /*  border-radius: 10px; */
+    /*
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    */
+}
+.personalInformation{
+
+    border: 1px solid black;
+    width: 95%;
+    padding: 10px 10px;
+    margin-top: 20px;
+}
+fieldset{
+    display: block;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.titleHeader {
+    text-align: left; 
+    padding-left: 10px;
+    width: 90%; margin-bottom: -25px;
+    color: blue;
+}
+.button{
+    margin: 10px;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+#agree {
+    display: none
+}
+    </style>
+    <script>
+function buttonShow() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="border: 1px solid rgb(226, 126, 142); background-color: pink; padding-left: 20px; margin-left: 50px; margin-right: 50px; font-size: 25px;">Loan Application Form</h1> 
+    <fieldset >            
+        <legend><h2 style="color: blue; font-size: 20px;"><b> Application's Personnal Information </b></h2></legend>
+        <div class="customerInformation">   
+            <table>
+                <tr>
+                    
+                </tr>
+                <tr>
+                    <td>FullName:</td>
+                    <td><input type="text" required></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" required></td>
+                </tr>
+                <tr>
+                    <td>Phone Number:</td>
+                    <td><input type="text" required></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" required></td>
+                </tr>
+                <tr>
+                    <td>ZIP code:</td>
+                    <td><input type="text" required pattern="[0-9]{3,}+[0-9]{4,}+[0-9]{3,}"></td>
+                </tr>
+            </table>
+        </div>
+      </fieldset>
+
+    <fieldset>
+       <legend style="color: blue; font-size: 20px;"><b> Application's Employment Information: </b></legend>
+        <div class="customerInformation">
+            <table>                
+                <tr>
+                    <td >Currer Employer:</td>
+                    <td>
+                        <input type="text" required>
+                    </td>
+                    </tr>
+                <tr>
+                    <td>Employer Address:</td>
+                    <td><input type="text" required></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" required></td>
+                </tr>  
+                <tr>
+                    <td>Phone Number:</td>
+                    <td><input type="text" required pattern="[0-9]{10,}"></td>
+                </tr>
+                <tr>
+                    <td>Email ID:</td>
+                    <td><input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td>
+                </tr>
+                <tr>
+                    <td>Fax:</td>
+                    <td><input type="text" required pattern="[0-9]{3,}+[0-9]{7,}"></td>
+                </tr>
+                <tr>
+                    <td>Designation</td>
+                    <td><input type="text" required></td>
+                </tr>
+                <tr>
+                    <td>Annual Income</td>
+                    <td><input type="number" required></td>
+                </tr>
+                
+            </table>
+      </fieldset>
+
+    <div>
+    <fieldset>
+        <legend style="color: blue; font-size: 20px;"><b> Loan Information: </b></legend>
+        <div class="customerInformation">
+        <table>
+            <tr>
+                 <td>Loan Type:</td>
+                 <td>
+                     <select name="" id="">
+                         <option value="Select">Select</option>
+                         <option value="Personnal Loan">Personnal Loan</option>
+                         <option value="Home Loan">Home Loan</option>
+                         <option value="Vehicle Loan">Vehicle Loan</option>
+                         <option value="Business Loan">Business Loan</option>
+                         <option value="Education Loan">Education Loan</option>
+                     </select>
+                 </td>
+             </tr>
+             <tr>
+                 <td>Principal:</td>
+                 <td><input type="number" required ></td>
+             </tr>
+             <tr>
+                 <td>Period</td>
+                 <td><input type="number" required ></td>
+             </tr>
+             <tr>
+                 <td>Internet:</td>
+                 <td><input type="text" required></td>
+             </tr>
+             <tr>
+                 <td>Period</td>
+                 <td><input type="checkbox" name="vehicle3" value="Boat" checked>
+                     I accept the terms and conditions
+                     <button id="buttonShow" onclick="buttonShow()">[Show]</button>
+                     <div id="myDIV" style="display: none; background-color: white;">
+                        Tự đi mà biết
+                      </div> 
+                 </td>
+                 
+             </tr> 
+                           
+         </table>
+      </fieldset>
+    </div>
+    </div>
+    
+        <center style="margin: 40px;">
+</body>
+</html>

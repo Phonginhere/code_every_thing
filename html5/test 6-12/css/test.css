@@ -1,0 +1,61 @@
+.header {
+    background-color: rgb(216, 76, 76);
+    height: 60px;
+}
+.item {
+    position:relative;
+    top:12px;
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+    display: inline;
+}
+.myanchor {
+    margin-left: 5px;
+}
+#search {
+    height: 25px;
+    padding-left: 15px;
+    border-radius: 13px;
+}
+.orderInformation {
+    background-color: rgb(200, 200, 200);
+    width: 90%;
+    padding: 20px 0px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgb(216, 76, 76);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(226, 92, 92, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(241, 109, 109, 0.75);
+}
+.tdTitle {
+    text-align: right;
+    padding-right: 10px;
+}
+.titleH2 {
+    width: 90%;
+    text-align: left;
+    margin-bottom: -25px;
+    padding-left: 10px;
+}
+.twoButtons {
+    height: 30px;
+    padding: 0px 20px;
+    margin: 20px;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 5px 0px  rgba(0,0,0,0.75);
+}
+footer {
+    height: 50px;
+    background-color: sandybrown;
+    text-align: center;
+    line-height: 50px;    
+}
+#myDIV {
+  /*  width: 100%; */
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 20px;
+    width: 110px;
+    height: 110px;
+}

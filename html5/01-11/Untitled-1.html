@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/01-11.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="item">
+            <i class="fab fa-windows"></i>
+            <a class="myanchor">Home</a>
+        </div>
+        <div class="item">
+            <i class="fas fa-image"></i>
+            <a class="myanchor">Gallery</a>
+        </div>
+        <div class="item">
+            <i class="fas fa-cart-plus"></i>
+            <a class="myanchor">Order</a>
+        </div>
+        <div class="item">
+            <i class="fas fa-mobile-alt"></i>
+            <a class="myanchor">Phone</a>
+        </div>
+        <div class="item">
+            <i class="fas fa-tablet-alt"></i>
+            <a class="myanchor">Tablet</a>
+        </div>
+        <div class="item">
+            <i class="fas fa-desktop"></i>
+            <a class="myanchor">Laptop</a>
+        </div>
+        <div class="item">
+            <button type="submit" class="btnSearch"><i class="fa fa-search"></i></button>
+            <input type="text" placeholder="Search.." name="search" id="search">
+
+            </input>
+        </div>
+    </div>
+    <h1>Order Details</h1>
+    <form action="" method="GET">
+        <center>
+            <div class="titleH2">
+                <h2>Customer Information</h2>
+            </div>
+            <div class="orderInformation">
+                <table>
+                    <tr>
+                        <td class="tdTitle">Title</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Ms">Ms</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdTitle">Fullname</td>
+                        <td><input type="text" name="" id="" required></td>
+                    </tr>
+                    <tr>
+                        <td class="tdTitle">Address</td>
+                        <td><input type="text" name="" id="" required></td>
+                    </tr>
+                    <tr>
+                        <td class="tdTitle">Phone</td>
+                        <td><input type="text" name="" id="" required></td>
+                    </tr>
+                    <tr>
+                        <td class="tdTitle">Email</td>
+                        <td><input type="email" name="" id="" required></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="titleH2">
+                <h2>Product</h2>
+            </div>
+            <div class="orderInformation">
+                <table>
+                    <tr>
+                        <td class="tdTitle">Name</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="Mac">Mac</option>
+                                <option value="Windows">Windows</option>
+                                <option value="Linux">Linux</option>
+                                <option value="Android">Android</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdTitle">Color</td>
+                        <td><input type="color" name="" id="" required></td>
+                    </tr>
+                    <tr>
+                        <td class="tdTitle">Quantity</td>
+                        <td><input type="number" name="" id="" required></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="titleH2">
+                <h2>Payment Details</h2>
+            </div>
+            <div class="orderInformation">
+                <div class="titleH2">
+                    <h2>Credit Card</h2>
+                </div>
+                <div class="orderInformation" style="background-color: rgb(240, 240, 240)">
+                    <table>
+                        <tr>
+                            <td class="tdTitle">Visa</td>
+                            <td>
+                                <input type="radio" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdTitle">Mastercard</td>
+                            <td>
+                                <input type="radio" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdTitle">Discover</td>
+                            <td>
+                                <input type="radio" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdTitle">American Express</td>
+                            <td>
+                                <input type="radio" required>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br><br>
+                <table>
+                    <tr>
+                        <td class="tdTitle">Card number</td>
+                        <td>
+                            <input type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdTitle">Expiration Date</td>
+                        <td>
+                            <input type="date">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdTitle"></td>
+                        <td><input type="checkbox" checked> I accept the terms and conditions
+                            <button>[Show&darr;]</button></td>
+                    </tr>
+                </table>
+            </div>
+            <center>
+                <button type="submit" class="twoButtons">Submit</button>
+                <button class="twoButtons">Cancel</button>
+            </center>
+        </center>
+    </form>
+    <footer>
+        <p>Copyright &copy; 2016 Micropsoft Corp.All right reserved 
+                <a href = "mailto: billg@micorsoft.com">billg@micorsoft.com</a>
+        </p>
+    </footer>
+</body>
+</html>

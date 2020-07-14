@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <style>
+     ul{list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+-webkit-animation: colorchange 45s infinite; 
+animation: colorchange 45s infinite;
+height: 48px;
+}
+@-webkit-keyframes colorchange {
+0%  {background: #FF0000;}    
+20%  {background: #FF8C00;}
+30%  {background: #FFD700;}
+40%  {background: #7CFC00;}
+50%  {background: #008000;}
+60%  {background: #00BFFF;}
+70%  {background: #0000CD;}
+80%  {background: #FF1493;}
+90%  {background: #9400D3;}
+100% {background: #78281F;}
+}
+
+
+@keyframes colorchange {
+0%  {background: #FF0000;}    
+20%  {background: #FF8C00;}
+30%  {background: #FFD700;}
+40%  {background: #7CFC00;}
+50%  {background: #008000;}
+60%  {background: #00BFFF;}
+70%  {background: #0000CD;}
+80%  {background: #FF1493;}
+90%  {background: #9400D3;}
+100% {background: #78281F;}
+}
+li {
+float: left;
+}
+
+li a,
+.dropbtn {
+display: inline-block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+background-color: gray;
+
+
+}
+
+li.dropdown {
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {
+background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+
+}
+li a.active {
+background-color: #4CAF50;
+color: white;
+}
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <h3>N-COV19 (Dịch virus corona 2019–20)</h3>
+  <ul>
+    <li><a href="./main.html">Trang chủ</a></li>
+    <li><a href="./char.html" class="active">Đặc điểm</a></li>
+    <li><a href="./soci1.html">Hoạt động</a></li>
+    <li><a href="./prot1.html">Phòng chống</a></li>
+    <li><a href="./advi1.html">Lời khuyên</a></li>
+    <li><a href="./shar.html">Chia sẻ</a></li>
+    <li><a href="./watch.html">Theo dõi</a></li>
+  </ul>
+
+  <div style="margin-top: -32px; margin-left: -3px;">
+    <table>
+      <tr>
+        <td>
+          <div class="vertical-menu">
+
+            <a href="./char1.html" class="active">Nguyên nhân</a>
+            <a href="./char2.html">Có ai gặp căn bệnh này?</a>
+            <a href="./char4.html">Dấu hiệu và triệu chứng</a>
+          </div>
+        </td>
+        <td>
+          <p style="font-size: 1.6em;">Các Coronavirus có mặt khắp nơi. Dường như dơi và chim, động vật có xương sống có máu nóng, là vật chủ lý
+            tưởng cho nguồn gen coronavirus (với dơi là Alphacoronavirus và Betacoronavirus, và chim là Gammacoronavirus
+            và Deltacoronavirus). Các tác giả cho rằng các coronavirus đã được liên kết với dơi trong một thời gian dài
+            và tổ tiên của virus SARS đã lây nhiễm lần đầu tiên các loài thuộc chi Hipposideridae, sau đó lây lan sang
+            các loài thuộc họ Rholophidae và sau đó đến cầy hương, cuối cùng lây sang người.</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>

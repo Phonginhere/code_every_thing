@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        th, td, tr, table{
+            border: 1px solid black;
+            width: 800px; 
+            border-collapse: collapse;
+            text-align: center;
+        }
+        
+    </style>
+    <script>
+         
+        function submitForm(e) {
+            e.preventDefault();
+            document.querySelector("#registration-form").setAttribute("style", "display: none");
+            document.querySelector("#registration-block").style.opacity = "1"
+            // document.querySelector("#registration-block").removeAttribute("style")
+
+            // get data
+            document.querySelector("#displayName").textContent = document.querySelector("#name").value
+            document.querySelector("#displayCMND").textContent = document.querySelector("#cmnd").value
+            document.querySelector("#displayProduct").textContent = document.querySelector("[name=choose]:checked").value
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h5>BẢNG GIÁ ĐĂNG KÝ CƯỚC DỊCH VỤ TRONG INTERNET</h5>
+    <div>
+       
+        <table >
+            <tr style="background-color: gray;">
+                
+                <td colspan="2"><b> VNN </b></td>
+                
+                <td colspan="2"><b> FPT</b></td>
+            </tr>
+            <tr style="background-color: gray;">
+                <td colspan="2"><b> Cước truy cập Internet </b></td>
+                <td colspan="2" ><b> Thẻ kết nối Internet</b></td>
+            </tr>
+            <tr style="font-style: italic; font-weight: bold; background-color: gray;"><b>
+                <td>Thời gian   </td>
+                <td>Cước truy cập(đ/ph)</td>
+                <td>Số giờ kết nối</td>
+                <td>Mệnh giá thẻ</td></b>
+            </tr>
+            <tr>
+                <td>0h-07h</td>
+                <td>100</td>
+                <td>14h</td>
+                <td>100.000đ</td>
+            </tr>
+            <tr>
+                <td>07h-19h</td>
+                <td>210</td>
+                <td>33h</td>
+                <td>200.000đ</td>
+            </tr>
+            <tr>
+                <td>19h-24h</td>
+                <td>150</td>
+                <td>55h</td>
+                <td>300.000đ</td>
+            </tr>
+            <tr>
+                <td colspan="2">Cước thuê bao trong tháng: <b style="text-decoration: underline;">27.273đ/tháng</b></td>
+                <td>110h</td>
+                <td>500.000đ</td>
+            </tr>
+        </table>
+
+    </div>
+        
+    <form onkeyup="checkButtons()" onsubmit="submitForm(event)">
+        <div id="registration-form">
+            <h5>NHẬP THÔNG TIN MUA THẺ</h5>
+            Họ và tên: <input type="text" name="name" id="name" required pattern="[a-zA-Z]+[ ]+[a-zA-Z ]+">
+            Số CMND: <input type="text" name="cmnd" id="cmnd" required pattern="[0-9]{10}">
+            <h5 style="text-decoration: underline;">Đăng ký:</h5>
+            <p>Mua thẻ:</p>
+            <div style="margin-left: 50px;">
+            <p>    <input type="radio" name="choose" id="one" value="100.000đ" required>100.000đ</p>
+            <p>    <input type="radio" name="choose" id="two" value="200.000đ" required>200.000đ</p>
+            <p>   <input type="radio" name="choose" id="three" value="300.000đ" required>300.000đ</p> 
+            <p>    <input type="radio" name="choose" id="five" value="500.000đ" required>500.000đ</p>
+            
+            <input type="submit" value="Cập Nhật"  id="btnSubmit"> 
+            <input type="reset"  id="btnReset" value="Hủy bỏ" style="margin-left: 30px; padding-right: 25px;">
+            </div>
+        </div>
+    </form>
+
+    <div id="registration-block" style="opacity: 0; transition: all 0.2s;">
+        <h2>Registration Completed</h2>
+        <table>
+            <tr>
+                <td>
+                    <label>Tên</label>
+                </td>
+                <td>
+                    <div id="displayName"></div>
+                </td>
+            </tr>
+            <tr>
+                <td><label>CMND</label></td>
+                <td>
+                    <div id="displayCMND"></div>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Thẻ nạp</label></td>
+                <td>
+                    <div id="displayProduct"></div>
+                </td>
+            </tr>
+            
+        </table>
+
+    </div>
+</body>
+</html>

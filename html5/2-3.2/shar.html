@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+         
+         ul{list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+-webkit-animation: colorchange 45s infinite; 
+animation: colorchange 45s infinite;
+height: 48px;
+}
+@-webkit-keyframes colorchange {
+0%  {background: #FF0000;}    
+20%  {background: #FF8C00;}
+30%  {background: #FFD700;}
+40%  {background: #7CFC00;}
+50%  {background: #008000;}
+60%  {background: #00BFFF;}
+70%  {background: #0000CD;}
+80%  {background: #FF1493;}
+90%  {background: #9400D3;}
+100% {background: #78281F;}
+}
+
+
+@keyframes colorchange {
+0%  {background: #FF0000;}    
+20%  {background: #FF8C00;}
+30%  {background: #FFD700;}
+40%  {background: #7CFC00;}
+50%  {background: #008000;}
+60%  {background: #00BFFF;}
+70%  {background: #0000CD;}
+80%  {background: #FF1493;}
+90%  {background: #9400D3;}
+100% {background: #78281F;}
+}
+li {
+float: left;
+}
+
+li a,
+.dropbtn {
+display: inline-block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+background-color: gray;
+
+
+}
+
+li.dropdown {
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {
+background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+
+}
+li a.active {
+background-color: #4CAF50;
+color: white;
+}
+        </style>
+    <title>Document</title>
+</head>
+<body>
+  <h3>N-COV19 (Dịch virus corona 2019–20)</h3>
+    <ul>
+        <li><a href="./main.html">Trang chủ</a></li>
+        <li><a href="./char1.html">Đặc điểm</a></li>
+        <li><a href="./soci1.html">Hoạt động</a></li>
+        <li><a href="./prot1.html">Phòng chống</a></li>
+        <li><a href="./advi1.html">Lời khuyên</a></li>
+        <li><a href="./shar.html" class="active">Chia sẻ</a></li>
+        <li><a href="./watch.html">Theo dõi</a></li>
+      </ul>
+      
+      
+      <p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+       
+</body>
+</html>

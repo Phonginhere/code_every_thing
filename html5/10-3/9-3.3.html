@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  width: 10px;
+  
+}
+
+.left {
+  width: 25%;
+  height: 300px;
+}
+
+.right {
+  width: 7.5%;
+  height: 300px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <div class="row">
+        <div class="column left" style="border: 1px solid black;">
+           <h3 style="margin-top: -10px;">Curriculm Vitae</h3>
+          
+          <p style="margin-top: 70px;">Welcome to my CV!</p>
+        </div>
+        <div class="column right" style="border: 1px solid black; ">
+        <div style="margin-top: -10px; "><a href="./9-3.3.2.html" style="text-decoration: none; color: black;">Personal Data</a></div>
+         <div style="margin-top: 50px; "><a href="#Edu" style="text-decoration: none; color: black;">Education</a></div>
+         <div style="margin-top: 50px;"><a href="#Pro" style="text-decoration: none; color: black;">Professtional Experiance</a></div>
+        </div>
+      </div>
+    </center>
+</body>
+</html>

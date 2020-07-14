@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/indexG2.js"></script>
+    <link rel="stylesheet" href="./css/indexG2.css">
+    <title>Document</title>
+</head>
+
+<body>    
+    <center>
+        
+        <h1 style="text-align: center;">Student management</h1>
+        <table id="table1">
+            <tr>
+                <td>
+                    <p>Student name:</p>
+                </td>
+                <td>
+                    <input type="text" placeholder="Input student name" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    DOB
+                </td>
+                <td>
+                    <input type="date" placeholder="Input student name" id="dob">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Gender</p>
+                </td>
+                <td>
+                    <input type="radio" name="gender" value="Male" checked>Male
+                    <input type="radio" name="gender" value="Female">Female
+                    <input type="radio" name="gender" value="Other">Other
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Select language</p>
+                </td>
+                <td>
+                    <input type="checkbox" value="English" name="language" checked> English
+                    <input type="checkbox" value="Chinese" name="language">Chinese
+                    <input type="checkbox" value="Russian" name="language">Russian
+                    <input type="checkbox" value="Vietnamese" name="language">Vietnamese
+                    <input type="checkbox" value="French" name="language">French
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Class name</p>
+                </td>
+                <td>
+                    <select id="className">
+                        
+                    </select>
+                    <script>
+                        fetClassDataToUI()                        
+                    </script>
+                    <button onclick="addClass()">
+                        Add Class
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <button id="add" onclick="addStudent()">
+                        Add
+                    </button>
+                </td>
+            </tr>
+        </table>
+        <h1>Student List</h1>
+        <table id="table2">
+            <tr>
+                <th>Name</th>
+                <th>Class</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Language</th>
+                <th></th>
+            </tr>
+        </table>
+        <div style="text-align: right;">
+            <p id="pTotalStudents"></p>
+        </div>
+    </center>
+</body>
+
+</html>

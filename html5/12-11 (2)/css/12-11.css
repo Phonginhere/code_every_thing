@@ -1,0 +1,38 @@
+.header{
+    background-color: green;
+    height: 60px;
+}
+.item{
+    position: relative;
+    top: 10px;
+    margin-left: 15px;
+    display: inline;
+    color: white;
+    font-size: 20px;
+    padding-top: 30px;
+}
+.myanchor{
+    margin-left: 10px;
+}
+#search {
+    height: 25px;
+    padding-left: 15px;
+    border-radius: 13px;
+}
+.video {
+    text-align: center;
+    margin-top: 30px;
+    
+}
+.find{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+    background-color: blue;
+}
+.btnSearch{
+    margin: 10px;
+}
+

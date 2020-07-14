@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+#tset, #treset {
+  box-sizing: padding-box;
+  
+  cursor: pointer;
+}
+#tpick {
+  white-space: nowrap;
+}
+#tpick-h, #tpick-m, #tpick-s {
+  display: inline-block;
+
+}
+#tpick select {
+  box-sizing: padding-box;
+
+}
+    </style>
+    <script type="text/javascript">
+        function time() {
+           var today = new Date();
+           var weekday=new Array(7);
+          
+           var day = weekday[today.getDay()];
+           var dd = today.getDate();
+           var mm = today.getMonth()+1; //January is 0!
+           var yyyy = today.getFullYear();
+           var h=today.getHours();
+           var m=today.getMinutes();
+           var s=today.getSeconds();
+           m=checkTime(m);
+           s=checkTime(s);
+           nowTime = h+":"+m+":"+s;
+           if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = day+', '+ dd+'/'+mm+'/'+yyyy;
+        
+           tmp='<span class="date">'+nowTime+'</span>';
+        
+           document.getElementById("clock").innerHTML=tmp;
+        
+           clocktime=setTimeout("time()","1000","JavaScript");
+           function checkTime(i)
+           {
+              if(i<10){
+             i="0" + i;
+              }
+              return i;
+           }
+        }
+        var ac = {
+  init : function () {
+  // ac.init() : start the alarm clock
+
+    // Get the current time - hour, min, seconds
+    ac.chr = document.getElementById("chr");
+    ac.cmin = document.getElementById("cmin");
+    ac.csec = document.getElementById("csec");
+
+    // The time picker - Hr, Min, Sec
+    ac.thr = ac.createSel(23);
+    document.getElementById("tpick-h").appendChild(ac.thr);
+    ac.thm = ac.createSel(59);
+    document.getElementById("tpick-m").appendChild(ac.thm);
+    ac.ths = ac.createSel(59);
+    document.getElementById("tpick-s").appendChild(ac.ths);
+
+    // The time picker - Set, reset
+    ac.tset = document.getElementById("tset");
+    ac.tset.addEventListener("click", ac.set);
+    ac.treset = document.getElementById("treset");
+    ac.treset.addEventListener("click", ac.reset);
+
+    // The alarm sound
+    ac.sound = document.getElementById("alarm-sound");
+
+    // Start the clock
+    ac.alarm = null;
+    setInterval(ac.tick, 1000);
+  },
+
+  createSel : function (max) {
+  // createSel() : support function - creates a selector for hr, min, sec
+
+    var selector = document.createElement("select");
+    for (var i=0; i<=max; i++) {
+      var opt = document.createElement("option");
+      i = ac.padzero(i);
+      opt.value = i;
+      opt.innerHTML = i;
+      selector.appendChild(opt);
+    }
+    return selector
+  },
+
+  padzero : function (num) {
+  // ac.padzero() : support function - pads hr, min, sec with 0 if <10
+
+    if (num < 10) { num = "0" + num; }
+    else { num = num.toString(); }
+    return num;
+  },
+
+  tick : function () {
+  // ac.tick() : update the current time
+
+    // Current time
+    var now = new Date();
+    var hr = ac.padzero(now.getHours());
+    var min = ac.padzero(now.getMinutes());
+    var sec = ac.padzero(now.getSeconds());
+
+    // Update current clock
+    ac.chr.innerHTML = hr;
+    ac.cmin.innerHTML = min;
+    ac.csec.innerHTML = sec;
+
+    // Check and sound alarm
+    if (ac.alarm != null) {
+      now = hr + min + sec;
+      if (now == ac.alarm) {
+        if (ac.sound.paused) {
+          ac.sound.play();
+        }
+      }
+    }
+  },
+
+  set : function () {
+  // ac.set() : set the alarm
+
+    ac.alarm = ac.thr.value + ac.thm.value + ac.ths.value;
+    ac.thr.disabled = true;
+    ac.thm.disabled = true;
+    ac.ths.disabled = true;
+    ac.tset.disabled = true;
+    ac.treset.disabled = false;
+  },
+
+  reset : function () {
+  // ac.reset() : reset the alarm
+
+    if (!ac.sound.paused) {
+      ac.sound.pause();
+    }
+    ac.alarm = null;
+    ac.thr.disabled = false;
+    ac.thm.disabled = false;
+    ac.ths.disabled = false;
+    ac.tset.disabled = false;
+    ac.treset.disabled = true;
+  }
+};
+
+// INIT - RUN ALARM CLOCK
+window.addEventListener("load", ac.init);
+function fun() { 
+    var url= document.getElementById("url").value; 
+    setTimeout(function(){window.location = url;}, ac.treset); 
+    }   
+        </script>
+    <title>Document</title>
+</head>
+<body onload="time()">
+    <div>
+    
+    
+   <table>
+<tr>
+    <td><td><b><p style="background-color: rgb(238, 238, 150); padding-right: 50px;">Current Time:</p></b></td>
+    <td><b><div id="clock"></div></b></td></td>
+</tr>
+   </table>
+            <div style="margin-top: -20px; margin-left: 5px;">
+                <table>
+                    <tr>
+                        <td> <b><p style="background-color: rgb(238, 238, 150); padding-right: 50px;">Set alarm:</p></b></td>
+                        <td><div id="tpick-h"></div>
+                            <div id="tpick-m"></div>
+                            <div id="tpick-s"></div>
+                            
+                    </tr>
+                </table>
+           
+        </div>
+        <div style="margin-left: 7px; margin-top: -20px;">
+            <table>
+                <tr>
+                    <td><b><p style="background-color: rgb(238, 238, 150); padding-right: 50px;">Set alarm Action:</p></b></td>
+                    <td><input id = "url" type = "text" name = "url" 
+                        placeholder = "Enter a url here"> 
+                </tr>
+            </table>
+        </div>
+        <div>
+         <b> <input type="button" value="Set Alarm!" id="tset" onclick = "fun()"/></b>
+         <b> <input type="button" value="Reset" id="treset" disabled/></b>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+.square{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    border: 5px dashed purple;
+    text-align: center;
+    color: yellow;
+}
+.square2{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    border: 5px dashed burlywood;
+    text-align: center;
+    color: yellow;
+}
+.square3{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    border: 5px solid purple;
+}
+.square4{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    border: 5px solid purple;
+}
+.square5{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    border: 5px solid greenyellow;
+}
+.square6{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    border: 5px solid brown;
+}

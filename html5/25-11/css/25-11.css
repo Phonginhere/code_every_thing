@@ -1,0 +1,17 @@
+.orderInformation {
+    background-color: rgb(200, 200, 200);
+    width: 90%;
+    padding: 10px 10px;
+    margin: 50px 10px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgb(114, 111, 111);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(78, 75, 75, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(83, 83, 83, 0.75);
+}
+#myDIV {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 20px;
+    overflow: scroll;
+  }

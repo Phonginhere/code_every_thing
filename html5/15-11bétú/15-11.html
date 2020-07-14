@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link href="facebook.css" rel="stylesheet">
+    <script src="facebook.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1> Facebook </h1>
+        <form action="" method="GET">
+            <table>
+                <tr>
+                    <td> <span> Email hoặc số điện thoại</span> </td>
+                    <td> <span>Mật khẩu </span></td>
+                </tr>
+                <tr>
+                    <td> <input type="email"></td>
+                    <td> <input type="password"></td>
+                    <td> <Button type="submit"> Đăng nhập </Button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="opacity"> Quên mật khẩu?</span></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="dang-ky">
+        <pre id="first-pre"> Đăng Ký </pre>
+        <pre id="second-pre">  Nhanh chóng và dễ dàng </pre>
+        <table>
+            <tr class="center-input">
+                <td></td>
+                <td></td>
+                <td>
+                <td> <input type="text" placeholder="Họ" class="input1">
+                    <input type="text" placeholder="Tên" class="input1"></td>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                <td><input type="email" placeholder="số điện thoại hoặc email" class="input2"></td>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                <td><input type="password" placeholder="mật khẩu mới" class="input2"></td>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                <td>
+                    <p> Giới Tính</p>
+                </td>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                <td>
+                    <select>
+                        <option value="Ngày"> Ngày </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <select>
+                        <option value="Tháng "> Tháng </option>
+                        <option value="Tháng 1">Tháng1</option>
+                        <option value="Tháng 2">Tháng 2</option>
+                        <option value="Tháng 3">Tháng 3</option>
+                        <option value="Tháng 4">Tháng 4</option>
+                        <option value="Tháng 5">Tháng 5</option>
+                        <option value="Tháng 6">Tháng 6</option>
+                        <option value="Tháng 7">Tháng 7</option>
+                        <option value="Tháng 8">Tháng 8</option>
+                        <option value="Tháng 9">Tháng 9</option>
+                        <option value="Tháng 10">Tháng 10</option>
+                        <option value="Tháng 11">Tháng 11</option>
+                        <option value="Tháng 12">Tháng 12</option>
+                    </select>
+                    <input type="number" min="1905" max="2019" value="Năm" placeholder="Năm" id="input-year">
+                </td>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                <td>
+                    <p> Ngày Sinh</p>
+                </td>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                <td>
+                    <input type="radio" name="gender" onclick="hiddenInput()"> <label>Nữ </label>
+                    <input type="radio" name="gender" onclick="hiddenInput()"> <label>Nam </label>
+                    <input type="radio" name="gender" onclick="addInput()"> <label>Khác</label>
+                </td>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                <td> <input type="text" id="hidden-input"></td>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                <td>
+                    <button id="button-submit"> Đăng Ký </button>
+                </td>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
